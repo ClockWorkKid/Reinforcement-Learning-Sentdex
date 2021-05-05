@@ -1,6 +1,7 @@
 env/
 .ipynb_checkpoints/
 .idea/
+models/
 __pycache__
 *.egg
 *.pt
