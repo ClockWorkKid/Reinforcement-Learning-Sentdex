@@ -1,0 +1,8 @@
+env/
+.ipynb_checkpoints/
+.idea/
+__pycache__
+*.egg
+*.pt
+*.pth
+*.pkl
