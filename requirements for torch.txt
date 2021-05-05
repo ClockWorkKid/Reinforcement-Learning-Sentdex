@@ -1,0 +1,5 @@
+conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
+pip install opencv-python
+pip install tqdm
+pip install matplotlib
+pip install numpy

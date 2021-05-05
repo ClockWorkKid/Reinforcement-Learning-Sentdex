@@ -91,10 +91,12 @@ class DQNAgent:
         self.replay_memory.append(transition)
 
     def get_qs(self, state):
-        return self.model.predict(np.array(state).reshape(-1, *state.shape)/255)[0]
+        state0 = np.array(state).reshape(-1, *state.shape)
+        prediction = self.model.predict(state0/255)
+        return prediction[0]
 
-    def train(self, terminal_state, step):
-        if len(self.replay_memory)< MIN_REPLAY_MEMORY_SIZE:
+    def train(self, terminal_state):
+        if len(self.replay_memory) < MIN_REPLAY_MEMORY_SIZE:
             return
 
         minibatch = random.sample(self.replay_memory, MINIBATCH_SIZE)
