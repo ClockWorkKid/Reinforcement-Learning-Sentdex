@@ -12,13 +12,13 @@ MIN_REPLAY_MEMORY_SIZE = 1_000  # Minimum number of steps in a memory to start t
 MINIBATCH_SIZE = 64  # How many steps (samples) to use for training
 UPDATE_TARGET_EVERY = 5  # Terminal states (end of episodes)
 MODEL_NAME = '2x256'
-MIN_REWARD = -200  # For model save
+MIN_REWARD = -100  # For model save
 MEMORY_FRACTION = 0.20
 
 checkpoint = False
 model_file = "models/2x256____-1.00max__-31.82avg__-67.00min__1620213331.model"
 # Environment settings
-EPISODES = 10000
+EPISODES = 30000
 
 # Exploration settings
 epsilon = 1  # not a constant, going to be decayed

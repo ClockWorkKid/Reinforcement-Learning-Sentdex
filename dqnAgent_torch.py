@@ -126,7 +126,7 @@ class DQNAgent:
             current_qs = current_qs_list[index]
             current_qs[action] = new_q
 
-            X.append(np.rollaxis(current_state, 2, 0))
+            X.append(np.rollaxis(current_state, 2, 0)/255)
             y.append(current_qs)
 
         X = torch.Tensor(np.array(X).astype(np.float32))
